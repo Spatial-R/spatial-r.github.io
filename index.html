@@ -11,13 +11,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="assets/stylesheets/application.css" rel="stylesheet" type="text/css">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/example.css">
+  <link href="penguin.css" rel="stylesheet" type="text/css">
 </head>
 
-<body style="background-image: url(assets/images/6.jpg);background-attachment:fixed">
+<body>
 
 <div id="monogram">
   <h2>Spatial-R: Bing Zhang</h2>
-  <img src=""/>
+  <!--<img src="" />-->
 </div>
 <br><br><br>
 <div id="social">
@@ -61,7 +63,11 @@
 
 <div id="talkbubble">
   <marquee direction=right><h2><a href="http://spatial-r.github.io/cv/news.html">News</a></h2></marquee>
-  <p>[May 10]  开始翻译《R中时间、空间及时空数据可视化》一书。 </p>
+ <div id="code">
+  <p>[Apr 17]  If you really love it, just go for it. </p>
+</div>
+</div>
+  <canvas id="garden"></canvas>
 </div>
 
 <div id="about">
@@ -100,22 +106,22 @@ href="https://github.com/">GitHub</a> and <a href="http://www.latex-project.org/
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="assets/javascript/jquery.backstretch.min.js"></script>
-<!-- <script type="text/javascript" src="assets/javascript/application.js"></script> -->
-
-<!-- <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript" src="assets/javascript/application.js"></script>
+<script type="text/javascript" src="assets/javascript/garden.js"></script>
+<script type="text/javascript" src="assets/javascript/functions.js"></script>
 <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-38928245-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>-->
+  if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+      document.execCommand("stop");
+  } else {
+    adjustCodePosition();
+    $("#code").typewriter();
+  }
+</script>
 
 </body>
 </html>

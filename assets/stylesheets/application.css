@@ -74,13 +74,13 @@ a:hover {
    top: 250px;
    margin-left: 50px;
    width: 300px;
-   height: 150px;
+   height: 200px;
    background-color: rgba(0,0,0,0.2);
    -moz-border-radius:    10px;
    -webkit-border-radius: 10px;
    border-radius:         10px;
 }
-#talkbubble:before {
+#talkbubble:before1 {
    content:"";
    position: absolute;
    margin-left: 300px;
@@ -91,6 +91,14 @@ a:hover {
    #border-top: 5px solid transparent;
    border-bottom: 30px solid rgba(0,0,0,0.2);
    border-right: 120px solid transparent;
+}
+
+#container {
+   position: absolute;
+   top: 50px;
+   margin-right: 50%;
+   width: 50px;
+   height: 200px;
 }
 
 #about {
